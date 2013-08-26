@@ -1,0 +1,72 @@
+:CLRHOME
+:DISP ""," SIMCITY"
+:PAUSE
+:CLRHOME
+:CLRLIST L1,L2,L
+3,L4,L5,L6
+:50->K
+:0->L1(1)
+:0->L2(1)
+:0->L3(1)
+:0->L4(1)
+:0->L5(1)
+:0->L6(1)
+:FNOFF
+:PLOTSOFF
+:5->M
+:10->F
+:10->V
+:0->A
+:0->C
+:0->T
+:0->P
+:0->I
+:0->@ (@=teta)
+:0->R
+:5000->B
+:1->XMIN
+:63->XMAX
+:0->XSCAL
+:1->YMIN
+:47->YMAX
+:0->YSCAL
+:CLRDRAW
+:CLRDRAW
+:PLOT1($,L1,L2, ($=1er schema du plot)
+')
+:PLOT2($,L3,L4,+)
+:PLOT3($,L5,L6,°)
+:PLOTSOFF
+:CLRDRAW
+LBL1
+:CLRHOME
+:DISP "CONSTRUI
+RE.....1","STAT....2","BU
+DGET.......3","CARTE...4
+","IMPOTS.....
+..5","POLICE..
+.....6","OPINIO
+N......7"
+:INPUT Z
+:CLRHOME
+:IF Z=0
+:THEN
+:CLRLIST L1,L2,L
+3,L4,L5,L6
+:STOP
+:END
+:IF Z=7
+:PRGM_OPINION
+:IF Z=6
+:PRGM_PSALAIR
+:IF Z=5
+:PRGM_TAX
+:IF Z=4
+:PRGM_STAT
+:IF Z=1
+:PRGM_CONSTRU
+:IF Z=2
+:PRGM_CARTE
+:IF Z=3
+:PRGM_BUDGET
+:GOTO 1
