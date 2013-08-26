@@ -2,8 +2,7 @@
 :DISP ""," SIMCITY"
 :PAUSE
 :CLRHOME
-:CLRLIST L1,L2,L
-3,L4,L5,L6
+:CLRLIST L1,L2,L3,L4,L5,L6
 :50->K
 :0->L1(1)
 :0->L2(1)
@@ -32,21 +31,14 @@
 :0->YSCAL
 :CLRDRAW
 :CLRDRAW
-:PLOT1($,L1,L2, ($=1er schema du plot)
-')
+:PLOT1($,L1,L2, ($=1er schema du plot')
 :PLOT2($,L3,L4,+)
 :PLOT3($,L5,L6,°)
 :PLOTSOFF
 :CLRDRAW
-LBL1
+:LBL 1
 :CLRHOME
-:DISP "CONSTRUI
-RE.....1","STAT....2","BU
-DGET.......3","CARTE...4
-","IMPOTS.....
-..5","POLICE..
-.....6","OPINIO
-N......7"
+:DISP "CONSTRUIRE.....1","STAT....2","BUDGET.......3","CARTE...4","IMPOTS.......5","POLICE.......6","OPINION......7"
 :INPUT Z
 :CLRHOME
 :IF Z=0
